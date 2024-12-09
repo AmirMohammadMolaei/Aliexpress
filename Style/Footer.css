@@ -1,0 +1,117 @@
+#Footer{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+#Footer > .Top{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #e8e8e8;
+}
+#Footer > .Top > .ItemsFooter{
+    height: 80%;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 45px;
+}
+#Footer > .Top > .ItemsFooter > .Card{
+    width: 100%;
+    height: 72px;
+    margin-top: 16px;
+    display: flex;
+    justify-content: start;
+    flex-flow: row wrap;
+    column-gap: 8px;
+    cursor: pointer;
+}
+#Footer > .Top > .ItemsFooter > .Card > .GifCard > img{width: 100%; height: 100%; border-radius: 8px;}
+#Footer > .Top > .ItemsFooter > .Card > .GifCard:not(:nth-child(7)){width: 48px; height: 36px; border-radius: 8px;}
+#Footer > .Top > .ItemsFooter > .Card > .GifCard:nth-child(7){width: 148px; height: 36px; border-radius: 8px;}
+#Footer > .Top > .ItemsFooter:nth-child(2),#Footer > .Top > .ItemsFooter:nth-child(3){ width: 230px; }
+#Footer > .Top > .ItemsFooter:nth-child(4){ width: 418px; }
+#Footer > .Top > .ItemsFooter:nth-child(5){ width: 230px; }
+#Footer > .Top > .ItemsFooter > ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-weight: normal;
+    font-size: 16px;
+    color: initial;
+}
+#Footer > .Top > .ItemsFooter > ul > li{padding: 3px 0;}
+#Footer > .Top > .Continue{
+    display: flex;
+    justify-content: start;
+    flex-flow: row wrap;
+    gap: 10px;
+}
+#Footer > .Top > .Continue > .Title{width: 100%;}
+#Footer > .Top > .Continue > .ContinueItems{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+#Footer > .Top > .Continue > .ContinueItems > img{width: 100%; height: 100%; border-radius: 8px;}
+#Footer > .Center{
+    background-color: #e8e8e8;
+    display: flex;
+    justify-content: center;
+}
+#Footer > .Center > .Cover{
+    width: 1519px;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    gap: 40px;
+}
+#Footer > .Center > .Cover > .ItemsFooterCenter{
+    width: 45%;
+    color: #555;
+}
+#Footer > .Center > .Cover > .ItemsFooterCenter > .Title{
+    margin-bottom: 10px;
+    color: #000;
+    font-weight: bold;
+}
+#Footer > .Center > .Cover > .ItemsFooterCenter > a:hover{color: orange;}
+#Footer > .Center > .Cover > .ItemsFooterCenter > a{
+    text-decoration: none;
+    color: initial;
+}
+#Footer > .Bottom{
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+#Footer > .Bottom > .Cover{
+    width: 1414px;
+    padding: 0 48px;
+    margin: 0 auto;
+    line-height: 30px;
+}
+#Footer > .Bottom > .Cover > a{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/*      Responsive       */
+
+@media screen and (max-width:1470px){#Footer > .Bottom > .Cover{ font-size: 12.8px; }}
+@media screen and (max-width:1200px){
+    #Footer > .Bottom{ display: none; }
+    #Footer > .Top > .ItemsFooter{ font-size: 15px; }
+    #Footer > .Top > .ItemsFooter > ul{ font-size: 12px; }
+    #Footer > .Center > .Cover{ font-size: 12px; gap: 20px; }
+}
+@media screen and (max-width:1100px){#Footer > .Top > .ItemsFooter:nth-child(4){ display: none; }}
+@media screen and (max-width:730px){#Footer > .Top > .ItemsFooter:nth-child(2){ display: none; }}
+@media screen and (max-width:530px){
+    #Footer > .Top{flex-flow: row wrap; justify-content: space-around;}
+    #Footer > .Top > .Continue{margin: 0;}
+    #Footer > .Top > .Continue > .Title{text-indent: 25px; }
+    #Footer > .Top > .Continue > .ContinueItems{margin-top: 10px; margin-bottom: 15px;}
+}
+@media screen and (max-width:416px){
+    #Footer > .Top > .Continue{margin-left: 60px;}
+    #Footer > .Top > .Continue > .Title{text-indent: 0; }
+    #Footer > .Top > .ItemsFooter:nth-child(2),#Footer > .Top > .ItemsFooter:nth-child(3){margin-left: 60px;}
+}

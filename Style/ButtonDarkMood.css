@@ -1,0 +1,19 @@
+#DarkMood:hover{background-color: #555;}
+#DarkMood{
+    width: 22.4px;
+    height: 22.4px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    position: fixed;
+    right: 25px;
+    top: 550px;
+    z-index: 150;
+    background-color: #fff;
+    border-radius: 100%;
+    background-image: url(../img/dark.png);
+    background-position: 50%;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: 0.5s;
+}

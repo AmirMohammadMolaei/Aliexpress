@@ -1,0 +1,772 @@
+#Header.MoveHeader{
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+}
+#Header > .Top{
+    padding: 16px 0;
+    width: 100%;
+    background-color: #191919;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    font-family: Open Sans,Roboto,Arial,Helvetica,sans-serif,SimSun; 
+    font-size: 12px;
+}
+#Header > .Top > .MenuHambergeri{
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/Menu.png);
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: 50%;
+    cursor: pointer;
+    display: none;
+}
+#Header > .Top > .MenuHambergeri:hover > .UlMenu{
+    left: 0;
+    overflow: visible;
+}
+#Header > .Top > .MenuHambergeri > .UlMenu{
+    width: 247px;
+    top: 0;
+    left: -247px;
+    transition: 0.5s;
+    display: block;
+    overflow: hidden;
+}
+#Header > .Top > .MenuHambergeri > .UlMenu > .LiMenu:hover{font-weight: normal;}
+#Header > .Top > .MenuHambergeri > .UlMenu > .LiMenu:hover > .UlMenu{
+    opacity: 1;
+    visibility: visible;
+}
+#Header > .Top > .MenuHambergeri > .UlMenu > .LiMenu > .UlMenu{
+    transition: 0.3s;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    left: 237px;
+    top: 15px;
+    width: 70%;
+}
+#Header > .Top > .MenuHambergeri > .UlMenu > .LiMenu > .UlMenu > .LiMenu{
+    background-image: url(../img/Right.png);
+    background-position: 98%;
+    background-size: 10px;
+}
+#Header > .Top > .MenuHambergeri > .UlMenu > .LiMenu > .UlMenu > .LiMenu > .UlMenu{
+    display: block;
+    left: 165px;
+    top: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+#Header > .Top > .MenuHambergeri > .UlMenu > .LiMenu > .UlMenu > .LiMenu > .UlMenu > .LiMenu:hover{color: rgb(253, 56, 79);}
+#Header > .Top > .MenuHambergeri > .UlMenu > .LiMenu > .UlMenu > .LiMenu > .UlMenu > .LiMenu{
+    background-image: none;
+    text-indent: -14px;
+}
+#Header > .Top > .Logo{
+    width: 210px;
+    height: 64px;
+    background-image: url(../img/logo.webp);
+    background-position: 45% 50%;
+    background-repeat: no-repeat;
+    background-size: 208px;
+    cursor: pointer;
+}
+#Header > .Top > .SearchBox{
+    width: 84%;
+    height: 40px;
+    border-radius: 25px;
+}
+#Header > .Top > .SearchBox > form > input{
+    border-radius: 25px;
+    width: 100%;
+    height: 40px;
+    outline: none;
+    background-image: url(../img/iconsearch.png);
+    background-repeat: no-repeat;
+    background-size: 60px;
+    background-position: 99% 50%;
+    text-indent: 25px; 
+}
+#Header > .Top > .DLapp{
+    cursor: pointer;
+    width: 126px;
+    height: 44px;
+    background-image: url(../img/app.png);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: 0 50%;
+    margin-left: 10px;
+    text-indent: 10px;
+    position: relative;
+}
+#Header > .Top > .DLapp:hover > .Arrow{
+    background-image: url(../img/arrowup.png);
+    background-repeat: no-repeat;
+    background-position: 107px -10%;
+    background-size: 20px;
+}
+#Header > .Top > .DLapp > .Arrow{
+    width: 135px;
+    background-image: url(../img/arrow.png);
+    background-repeat: no-repeat;
+    background-position: 107px -10%;
+    background-size: 20px;
+    cursor: pointer;
+    padding-bottom: 30px;
+}
+#Header > .Top > .DLapp:hover > .DlSubMenu{
+    opacity: 1;
+    visibility: visible;
+}
+#Header > .Top > .DLapp > .DlSubMenu{
+    background-color: #fff;
+    width: 560px;
+    height: 162px;
+    position: absolute;
+    top: 60px;
+    right: 5px;
+    border-radius: 25px;
+    display: flex;
+    flex-flow: row wrap;
+    cursor: default;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    z-index: 999;
+}
+#Header > .Top > .DLapp > .DlSubMenu > .QRCode > img{width: 100%; height: 100%;}
+#Header > .Top > .DLapp > .DlSubMenu > .QRCode{
+    width: 120px;
+    height: 120px;
+    margin: 20px 24px 0 14px;
+}
+#Header > .Top > .DLapp:hover > .DlSubMenu > .Diamond{
+    opacity: 1;
+    visibility: visible;
+}
+#Header > .Top > .DLapp > .DlSubMenu > .Diamond{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 50px;
+    top: -8px;
+    background-image: url(../img/Diamond.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    opacity: 0;
+    visibility: hidden;
+}
+#Header > .Top > .DLapp > .DlSubMenu > .SubMenuRight{
+    width: 328px;
+    display: flex;
+    flex-flow: row wrap;
+}
+#Header > .Top > .DLapp > .DlSubMenu > .SubMenuRight > .Title{
+    margin: 0;
+    width: 100%;
+    height: 26px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+#Header > .Top > .DLapp > .DlSubMenu > .SubMenuRight > .Description{
+    margin: 0;
+    width: 100%;
+    height: 21px;
+    margin-top: -15px;
+    font-size: 14px;
+}
+#Header > .Top > .DLapp > .DlSubMenu > .SubMenuRight > .AppStore{
+    width: 45%;
+    height: 48px;
+    border-radius: 50px;
+    background-color: #000;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 5px;
+    text-align: center;
+    line-height: 48px;
+    cursor: pointer;
+}
+#Header > .Top > .DLapp > .DlSubMenu > .SubMenuRight > .GooglePlay{
+    width: 45%;
+    height: 48px;
+    border-radius: 50px;
+    background-color: #000;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 48px;
+    cursor: pointer;
+}
+#Header > .Top > .Country{
+    cursor: pointer;
+    width: 95px;
+    height: 44px;
+    background-image: url(../img/Iraq.png);
+    background-repeat: no-repeat;
+    background-position: 1% 50%;
+    background-size: 30px;
+    position: relative;
+}
+#Header > .Top > div > p{
+    color: #fff;
+    line-height: 12px;
+    font-size: 12px;
+    text-align: center;
+    margin: 0;
+    margin-top: 8px;
+}
+#Header > .Top > .Country > .Arrow{
+    width: 100px;
+    background-image: url(../img/arrow.png);
+    background-repeat: no-repeat;
+    background-position: 65px 50%;
+    background-size: 20px;
+    cursor: pointer;
+}
+#Header > .Top > .Country:hover > #CountryMenu{
+    visibility: visible;
+    opacity: 1;
+}
+#Header > .Top > .Country > #CountryMenu{
+    width: 252px;
+    height: 320px;
+    padding: 8px 24px 24px;
+    background-color: #fff;
+    border-radius: 25px;
+    position: absolute;
+    top: 60px;
+    right: -25px;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    z-index: 999;
+}
+#Header > .Top > .Country > #CountryMenu > img{
+    width: 50px;
+    height: 40px;
+    position: absolute;
+    top: -17px;
+    right: 50px;
+}
+#Header > .Top > .Country > #CountryMenu > .Chosse{
+    font-size: 25px;
+    font-weight: bolder;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 100%;
+    margin-top: 16px;
+    cursor: text;
+}
+#Header > .Top > .Country > #CountryMenu > #SaveChosseMenuCountry{
+    width: 80%;
+    height: 40px;
+    border-radius: 25px;
+    background-color: #000;
+    color: #fff;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 40px;
+}
+#Header > .Top > .Country > #CountryMenu > .Chosse > #ChosseCountry,#Header > .Top > .Country > #CountryMenu > .Chosse > #ChosseLanguage,
+#Header > .Top > .Country > #CountryMenu > .Chosse > #ChosseCurrency{
+    cursor: pointer;
+    width: 90%;
+    height: 38px;
+    padding: 0 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-top: 8px;
+    background-image: url(../img/arrowdown.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: 90% 50%;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 35px;
+    position: relative;
+}
+#Header > .Top > .Country > #CountryMenu > .Chosse > #ChosseCountry{display: flex;}
+#Header > .Top > .Country > #CountryMenu > .Chosse > #ChosseCountry > span{width: 35px; height: 35px; display: block; margin-right: 15px;}
+#Header > .Top > .Country > #CountryMenu > .Chosse > #ChosseCountry > span > img{width: 100%; height: 100%;}
+#Header > .Top > .Country > #CountryMenu > .Chosse >  .Mega{
+    width: 83%;
+    height: 250px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    position: absolute;
+    top: 105px;
+    left: 25px;
+    z-index: 200;
+    overflow-y: scroll;
+    display: none;
+}
+#Header > .Top > .Country > #CountryMenu > .Chosse >  #Zaban{
+    top: 200px;
+    overflow-y: hidden;
+    height: 110px;
+}
+#Header > .Top > .Country > #CountryMenu > .Chosse >  #Zaban > .Search{
+    height: 60px;
+}
+#Header > .Top > .Country > #CountryMenu > .Chosse >  #VahedPol{top: 295px;}
+#Header > .Top > .Country > #CountryMenu > .Chosse >  #VahedPol > .Search{height: 60px;}
+#Header > .Top > .Country > #CountryMenu > .Chosse >  .Mega > .Search{
+    border-bottom: 1px solid #ccc;
+    height: 100px;
+    width: 95%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+#Header > .Top > .Country > #CountryMenu > .Chosse >  .Mega > .Search > input{
+    width: 65%;
+    height: 13px;
+    padding: 12px 12px 12px 50px;
+    margin-top: 10px;
+    border-radius: 5px;
+    outline: none;
+    background-color: #cccccc21;
+    border: none;
+    background-image: url(../img/search.PNG);
+    background-position: 5% 50%;
+    background-repeat: no-repeat;
+    background-size: 30px;
+}
+#Header > .Top > .Country > #CountryMenu > .Chosse >  .Mega > .Search > h3{
+    width: 100%;
+    font-size: 17px;
+    text-indent: 14px;
+}
+#Header > .Top > .Country > #CountryMenu > .Chosse >  .Mega > ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: calc(100% - 100px);
+    width: 100%;
+    margin-top: 10px;
+}
+#Header > .Top > .Country > #CountryMenu > .Chosse >  .Mega > ul > li:hover{background-color: #0000002c;}
+#Header > .Top > .Country > #CountryMenu > .Chosse >  .Mega > ul > li{
+    padding: 0 12px;
+    line-height: 32px;
+    font-size: 14px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: pointer;
+    font-weight: bold;
+    text-indent: 30px;
+}
+#Header > .Top > .User{
+    width: 153px;
+    cursor: pointer;
+    height: 44px;
+    background-image: url(../img/User.png);
+    background-repeat: no-repeat;
+    background-position: 1% 50%;
+    background-size: 25px;
+    position: relative;
+}
+#Header > .Top > .User:hover > .Arrow{
+    background-image: url(../img/arrowup.png);
+    background-repeat: no-repeat;
+    background-position: 125px 50%;
+    background-size: 20px;
+}
+#Header > .Top > .User > .Arrow{
+    width: 160px;
+    background-image: url(../img/arrow.png);
+    background-repeat: no-repeat;
+    background-position: 125px 50%;
+    background-size: 20px;
+    cursor: pointer;
+}
+#Header > .Top > .User:hover > .UserSubMenu{
+    opacity: 1;
+    visibility: visible;
+}
+#Header > .Top > .User > .UserSubMenu{
+    transition: 0.5s;
+    width: 241px;
+    height: 626px;
+    background-color: #fff;
+    position: absolute;
+    top: 55px;
+    right: -55px;
+    padding: 12px 16px;
+    border-radius: 25px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+}
+#Header > .Top > .User > .UserSubMenu > span{
+    width: 15px;
+    height: 15px;
+    display: block;
+    background-image: url(../img/Diamond.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    margin: -20px 0 25px 110px;
+}
+#Header > .Top > .User > .UserSubMenu > .SingIn{
+    width: 90%;
+    height: 45px;
+    background-color: #000;
+    font-size: 20px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 25px;
+    margin: 15px auto 0;
+}
+#Header > .Top > .User > .UserSubMenu > .Register{
+    width: 90%;
+    height: 45px;
+    font-size: 13px;
+    text-align: center;
+    line-height: 45px;
+    color: #555;
+    border-radius: 25px;
+    margin: 0 auto;
+}
+#Header > .Top > .User > .UserSubMenu > ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border-top: 1px solid #ccc;
+    padding: 10px 0;
+}
+#Header > .Top > .User > .UserSubMenu > ul > li:hover{
+    background-color: #00000033;
+    color: rgb(253, 56, 79);
+}
+#Header > .Top > .User > .UserSubMenu > ul > li{
+    width: 100%;
+    height: 20px;
+    padding: 10px 0;
+    font-size: 16px;
+    border-radius: 5px;
+    text-indent: 30px;
+}
+#Header > .Top > .User > .UserSubMenu > ul > .BottomLi{color: #555;}
+#Header > .Top > .BuyBasket{
+    cursor: pointer;
+    width: 61px;
+    height: 44px;
+    background-image: url(../img/Basket.png);
+    background-repeat: no-repeat;
+    background-size: 35px;
+    background-position: 1% 50%;
+}
+#Header > .Top > .BuyBasket > p{text-indent: 30px;}
+#Header > .Top > .BuyBasket > .Arrow{
+    width: 100px;
+    height: 12px;
+    background-image: url(../img/Zero.png);
+    background-repeat: no-repeat;
+    background-position: 46% 50%;
+    background-size: 20px;
+    cursor: pointer;
+}
+#Header > .MobileSearchBox{
+    width: 100%;
+    height: 50px;
+    background-color: #191919;
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+#Header > .MobileSearchBox > input{
+    width: 95%;
+    height: 40px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    background-image: url(../img/iconsearch.png);
+    background-repeat: no-repeat;
+    background-size: 60px;
+    background-position: 99% 50%;
+    text-indent: 25px; 
+}
+#Header > .Bottom{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: start;
+    white-space: nowrap;
+    background-color: #191919;
+    column-gap: 27px;
+    font-family: Open Sans,Roboto,Arial,Helvetica,sans-serif,SimSun; 
+}
+#Header > .Bottom > .ItemsTap:hover{
+    cursor: pointer; 
+    background-color: #cccccc2f;
+}
+#Header > .Bottom > .ItemsTap{
+    color: rgb(255, 255, 255);
+    padding: 0 16px;
+    margin: 10px 0;
+    border-radius: 25px;
+    line-height: 40px;
+    font-size: 15px;
+}
+#Header > .Bottom > .Sale{
+    color: rgb(253, 56, 79);
+}
+#Header > .Bottom > #Menu:hover{
+    background-image: url(../img/arrowupblack.png);
+    background-position: 90% 50%;
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-color: #fff;
+    color: #000;
+    line-height: 37px;
+}
+#Header > .Bottom > #Menu{
+    border: 1px solid #ccc;
+    min-width: 180px;
+    text-indent: -9px;
+    padding-left: 45px;
+    padding-right: 20px;
+    position: relative;
+    background-image: url(../img/arrow.png);
+    background-position: 90% 50%;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    margin-left: 45px;
+}
+#Header > .Bottom > #Menu:hover > #Hamberger{
+    background-image: url("../img/Menuhover.png");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+#Header > .Bottom > #Menu > #Hamberger{
+    width: 10%;
+    height: 25px;
+    position: absolute;
+    left: 10px;
+    bottom: 6px;
+    background-image: url("../img/Menu.png");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+#Header > .Bottom > #Menu:hover > .UlMenu{
+    display: block;
+}
+.UlMenu{
+    position: absolute;
+    left: 0;
+    top: 25px;
+    width: 100%;
+    background-color: #fff;
+    color: #000;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    display: none;
+    border-radius: 0 0 15px 15px;
+    z-index: 998;
+    white-space: nowrap;
+}
+.UlMenu > .LiMenu:hover{
+    background-color: rgba(0, 0, 0, 0.164);
+    font-weight: bold;
+    color: #000;
+}
+.UlMenu > .LiMenu{
+    padding: 12px 10px 12px 24px;
+    height: 19px;
+    line-height: 19px;
+    color: #3a3e4a;
+    text-indent: 10px;
+    position: relative;
+}
+.UlMenu > .LiMenu{
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
+    background-size: 16px;
+}
+.UlMenu > .LiMenu:nth-child(1){background-image: url(../img/Home.webp);}
+.UlMenu > .LiMenu:nth-child(2){background-image: url(../img/Moble2.webp);}
+.UlMenu > .LiMenu:nth-child(3){background-image: url(../img/Taye.webp);}
+.UlMenu > .LiMenu:nth-child(4){background-image: url(../img/Game.webp);}
+.UlMenu > .LiMenu:nth-child(5){background-image: url(../img/Kif.webp);}
+.UlMenu > .LiMenu:nth-child(6){background-image: url(../img/TayeRang.webp);}
+.UlMenu > .LiMenu:nth-child(7){background-image: url(../img/Kolah.webp);}
+.UlMenu > .LiMenu:nth-child(8){background-image: url(../img/Mankan.webp);}
+.UlMenu > .LiMenu:nth-child(9){background-image: url(../img/Dorbin.webp);}
+.UlMenu > .LiMenu:nth-child(10){background-image: url(../img/Sag.webp);}
+.UlMenu > .LiMenu:nth-child(11){background-image: url(../img/Mankan2.webp);}
+.UlMenu > .LiMegaMenu:hover > .MegaMenu{
+    opacity: 1;
+    visibility: visible;
+}
+.UlMenu > .LiMegaMenu > .MegaMenu{
+    width: 673px;
+    height: 428px;
+    padding: 27px 27px 27px 0;
+    background-color: #fff;
+    position: absolute;
+    left: 243px;
+    top: -10px;
+    z-index: 40;
+    border-radius: 25px;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    font-size: 15px;
+    transition: 0.5s;
+}
+.UlMenu > .LiMegaMenu > .MegaMenu > .MegaItemsLeft{
+    width: 75%;
+    height: 100%;
+    border-right: 1px solid #ccc;
+}
+.UlMenu > .LiMegaMenu > .MegaMenu > .MegaItemsLeft > ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: start;
+    flex-flow: row wrap;
+    column-gap: 15px;
+    row-gap: 5px;
+}
+.UlMenu > .LiMegaMenu > .MegaMenu > .MegaItemsLeft > ul > li{
+    height: 220px;
+    width: 30%;
+}
+.UlMenu > .LiMegaMenu > .MegaMenu > .MegaItemsLeft > ul > li > ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.UlMenu > .LiMegaMenu > .MegaMenu > .MegaItemsLeft > ul > li > ul > li{
+    font-weight: normal;
+    padding: 5px 0;
+    color: #555;
+    font-size: 14px;
+}
+.UlMenu > .LiMegaMenu > .MegaMenu > .MegaItemsLeft > ul > li > ul > li:hover{color: rgb(253, 56, 79);}
+.UlMenu > .LiMegaMenu > .MegaMenu > .MegaItemsRight{
+    width: 25%;
+    height: 100%;
+}
+.UlMenu > .LiMegaMenu > .MegaMenu > .MegaItemsRight > ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.UlMenu > .LiMegaMenu > .MegaMenu > .MegaItemsRight > ul > li:nth-child(3){
+    width: 100%;
+    height: 100%;
+}
+.UlMenu > .LiMegaMenu > .MegaMenu > .MegaItemsRight > ul > li > ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.UlMenu > .LiMegaMenu > .MegaMenu > .MegaItemsRight > ul > li > ul > li{
+    font-weight: normal;
+    padding: 5px 0;
+    color: #555;
+    font-size: 14px;
+}
+.UlMenu > .LiMegaMenu > .MegaMenu > .MegaItemsRight > ul > li > ul > li:hover{color: rgb(253, 56, 79);}
+            
+
+/*      Responsive       */
+
+
+@media screen and (max-width:1600px){#Header > .Top > .SearchBox{ width: 43.7%; }}
+@media screen and (max-width:1414px){
+    #Header > .Top > div > p{ display: none; }
+    #Header > .Top > div:not(.Logo,.SearchBox){ width: 40px; }
+    #Header > .Bottom{ column-gap: 2px; justify-content: space-around;}
+    #Header > .Bottom > .ItemsTap{ padding: 0 5px;}
+}
+/* MegaMenu */
+@media screen and (max-width:1100px){
+    #Header > .Top > .MenuHambergeri .UlMenu > .LiMegaMenu > .MegaMenu > .MegaItemsRight{ display: none;}
+    #Header > .Top > .MenuHambergeri .UlMenu > .LiMegaMenu > .MegaMenu > .MegaItemsLeft{ width: 100%; border: none; }
+    #Header > .Top > .MenuHambergeri .UlMenu > .LiMegaMenu > .MegaMenu{ width: 500px;}
+    #Header > .Bottom > #Menu{display: none;}
+    #Header > .Top > .MenuHambergeri{display: block;}
+}
+@media screen and (max-width:950px){
+    #Header > .Top > .MenuHambergeri .UlMenu > .LiMegaMenu > .MegaMenu > .MegaItemsLeft > ul > li:nth-child(3){ display: none; }
+    #Header > .Top > .MenuHambergeri .UlMenu > .LiMegaMenu > .MegaMenu > .MegaItemsLeft > ul{ column-gap: 54px; }
+    #Header > .Top > .MenuHambergeri .UlMenu > .LiMegaMenu > .MegaMenu{ width: 320px;}
+}
+@media screen and (max-width:630px){
+    #Header > .Top > .MenuHambergeri .UlMenu > .LiMegaMenu > .MegaMenu > .MegaItemsLeft > ul > li:nth-child(2){ display: none; }
+    #Header > .Top > .MenuHambergeri .UlMenu > .LiMegaMenu > .MegaMenu > .MegaItemsLeft > ul > li:nth-child(5){ display: none; }
+    #Header > .Top > .MenuHambergeri .UlMenu > .LiMegaMenu > .MegaMenu{ width: 130px;}
+}
+@media screen and (max-width:860px){
+    #Header > .Top > .DLapp > .DlSubMenu{ width: 368px; }
+    #Header > .Top > .DLapp > .DlSubMenu > .QRCode{ width: 80px; }
+    #Header > .Top > .DLapp > .DlSubMenu > .SubMenuRight{ width: 245px; }
+    #Header > .Top > .DLapp > .DlSubMenu > .SubMenuRight > .Title{ font-size: 14px; }
+    #Header > .Top > .DLapp > .DlSubMenu > .SubMenuRight > .Description{ font-size: 11px; }
+    #Header > .Top > .DLapp > .DlSubMenu > .SubMenuRight > .AppStore{ font-size: 14px; }
+    #Header > .Top > .DLapp > .DlSubMenu > .SubMenuRight > .GooglePlay{ font-size: 14px; }
+    #Header > .Top > .Country > #CountryMenu{ width: 135px; }
+    #Header > .Top > .User > .UserSubMenu{ width: 180px; }
+    #Header > .Top > .User > .UserSubMenu > ul > li{ font-size: 13px; }
+}
+@media screen and (max-width:750px){
+    #Header > .Bottom > .ItemsTap{font-size: 12px;}
+    #Header > .Top > .SearchBox{display: none;}
+    #Header > .MobileSearchBox{ display: flex;}
+    #Header > .Top{gap: 50px;}
+}
+@media screen and (max-width:610px){
+    #Header > .Bottom > .ResponsiveTap4{display: none;}
+    #Header > .Top > .MenuHambergeri > .UlMenu > .LiMenu > .UlMenu > .LiMenu{background-image: url(../img/arrowdown.png); overflow: hidden;}
+    #Header > .Top > .MenuHambergeri > .UlMenu > .LiMenu > .UlMenu > .LiMenu > .UlMenu{
+        position: static;
+        width: 100%;
+        margin-top: 12px;
+        border-radius: 0;
+    }
+}
+@media screen and (max-width:550px){
+    #Header > .Bottom > .ResponsiveTap3{display: none;}
+    #Header > .Top{gap: 10px;}
+    #Header > .Top > .MenuHambergeri > .UlMenu{font-size: 12px;}
+}
+@media screen and (max-width:550px){
+    #Header > .Bottom > .ResponsiveTap2{display: none;}
+    #Header > .Top > .MenuHambergeri > .UlMenu{width: 210px;}
+    #Header > .Top > .MenuHambergeri > .UlMenu > .LiMenu > .UlMenu{left: 205px;}
+    #Header > .Top > .MenuHambergeri > .UlMenu > .LiMenu > .UlMenu > .LiMenu{font-size: 12px; padding-left: 10px;}
+}
+@media screen and (max-width:365px){
+    #Header > .Bottom > .ResponsiveTap1{display: none;}
+    #Header > .Top > .DLapp{display: none;}
+    #Header > .Top > .Country{display: none;}
+}
